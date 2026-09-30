@@ -7,7 +7,7 @@ Open an issue to request a build or ping/DM me on Discord @gamer.191
 ## Build process:
 
 1. `pr=0000` (replace with PR number)
-1. `gh pr checkout $pr -R yt-dlp/yt-dlp`
+1. `gh pr checkout $pr -R yt-dlp/yt-dlp -b PR$pr`
 1. `git rebase upstream/master`
 1. `git diff HEAD upstream/master`
 1. Manually inspect diff for obvious malware
