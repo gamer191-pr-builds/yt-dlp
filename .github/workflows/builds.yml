@@ -12,6 +12,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v7
+      - run: git remote add upstream https://github.com/yt-dlp/yt-dlp.git
       - run: git checkout -b yt-dlp-master upstream/master
       - run: gh pr checkout ${{ github.event.inputs.pr }} -R yt-dlp/yt-dlp
       - run: git rebase yt-dlp-master
