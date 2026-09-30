@@ -1,0 +1,19 @@
+name: Build PR
+on: 
+  workflow_dispatch:
+    inputs:
+      pr:
+        required: true
+        type: string
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+      - run: gh pr checkout ${{ github.event.inputs.pr }}
+      - run: git rebase upstream/master
+      - run: git push --force origin HEAD:PR${{ github.event.inputs.pr }}
+      - run: gh workflow run release.yml --ref PR${{ github.event.inputs.pr }} -f source=yt-dlp/yt-dlp -f target=$GITHUB_REPOSITORY@PR${{ github.event.inputs.pr }} -f prerelease=true
+      
