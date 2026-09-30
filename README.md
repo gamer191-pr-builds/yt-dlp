@@ -4,6 +4,8 @@ Install builds using `yt-dlp --update-to gamer191-pr-builds/yt-dlp@PR0000` repla
 
 Open an issue to request a build or ping/DM me on Discord @gamer.191
 
+To save time, builds do not include Linux Armv7l binaries unless specifically requested
+
 ## Build process:
 
 1. `pr=0000` (replace with PR number)
