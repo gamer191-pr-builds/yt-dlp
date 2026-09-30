@@ -12,4 +12,4 @@ Open an issue to request a build or ping/DM me on Discord @gamer.191
 1. `git diff PR$pr upstream/master`
 1. Manually inspect diff for obvious malware
 1. `git push --force origin PR$pr:PR$pr`
-1. `gh workflow run release.yml -R gamer191-pr-builds/yt-dlp --ref PR$pr -f source=yt-dlp/yt-dlp -f target=gamer191-pr-builds/yt-dlp@PR$pr -f prerelease=true`
+1. `gh workflow run release.yml -R gamer191-pr-builds/yt-dlp --ref PR$pr -f source=yt-dlp/yt-dlp -f target=gamer191-pr-builds/yt-dlp@PR$pr -f prerelease=true -f linux_armv7l=false`
