@@ -12,8 +12,9 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v7
+      - run: git checkout -b yt-dlp-master upstream/master
       - run: gh pr checkout ${{ github.event.inputs.pr }} -R yt-dlp/yt-dlp
-      - run: git rebase upstream/master
+      - run: git rebase yt-dlp-master
       - run: git push --force origin HEAD:PR${{ github.event.inputs.pr }}
       - run: gh workflow run release.yml --ref PR${{ github.event.inputs.pr }} -f source=yt-dlp/yt-dlp -f target=$GITHUB_REPOSITORY@PR${{ github.event.inputs.pr }} -f prerelease=true
       
