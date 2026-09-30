@@ -7,7 +7,7 @@ body:
       label: "Enter a link to the PR you are requesting a build for"
       placeholder: "https://github.com/yt-dlp/yt-dlp/pull/00000"
     validations:
-    required: true
+      required: true
   - type: dropdown
     attributes:
       label: "Advanced: Do you plan to run the builds on a Linux arm32l device (eg Raspberry Pi)"
