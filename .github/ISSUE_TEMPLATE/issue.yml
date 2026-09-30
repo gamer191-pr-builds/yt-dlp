@@ -8,8 +8,8 @@ body:
       placeholder: "https://github.com/yt-dlp/yt-dlp/pull/00000"
     validations:
     required: true
- - type: dropdown
-   attributes:
+  - type: dropdown
+    attributes:
       label: "Advanced: Do you plan to run the builds on a Linux arm32l device (eg Raspberry Pi)"
       options:
         - "No (default, there's a 99% chance you want this option)"
