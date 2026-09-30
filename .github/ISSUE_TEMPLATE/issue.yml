@@ -1,6 +1,6 @@
 name: "Build request"
 description: "Request a build"
-Title: "Build Request (do not edit this)"
+title: "Build Request (do not edit this)"
 body:
   - type: input
     attributes:
