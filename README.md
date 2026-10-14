@@ -10,6 +10,7 @@ To save time, builds do not include Linux Armv7l binaries unless specifically re
 
 1. `pr=0000` (replace with PR number)
 1. `gh pr checkout $pr -R yt-dlp/yt-dlp -b PR$pr`
+1. `git fetch --all`
 1. `git rebase upstream/master`
 1. `git diff PR$pr upstream/master`
 1. Manually inspect diff for obvious malware
